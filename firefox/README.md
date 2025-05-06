@@ -7,7 +7,40 @@ Lorsque vous visitez une page web, votre navigateur envoie volontairement des in
 
 ## Test du niveau de sécurité de la configuration du navigateur
 
+Pour tester son niveau de trace sur Internet :
+
+```txt
 cf. https://coveryourtracks.eff.org/
+```
+
+## Liste de versions 
+
+Firefox
+│
+├── Release (Stable)
+│     ├── Navigation privée (depuis v3.5, améliorée v4+) : ne conserve pas l’historique, les cookies ni les fichiers temporaires.
+│     ├── Blocage des cookies tiers et protection contre le pistage (activé par défaut depuis v67).
+│     ├── Suppression rapide de l’historique récent et fonction « Oublier ce site » (v4+).
+│     ├── Isolation des sites (First Party Isolation, partiellement intégrée après v52).
+│     ├── Indicateur de connexion non sécurisée dans la barre d’adresse (depuis v60, généralisé en v121).
+│
+├── Beta
+│     ├── Test anticipé des fonctions d’anonymisation avant leur arrivée en stable.
+│     ├── Blocage avancé des contenus non sécurisés (v59+).
+│
+├── Developer Edition
+│     ├── Accès anticipé aux outils de confidentialité expérimentaux.
+│     ├── Possibilité de désactiver la télémétrie (impact sur l’anonymat).
+│
+├── Nightly
+│     ├── Premiers tests des nouvelles protections d’anonymisation (blocage de contenus mixtes, labels de connexion non sécurisée).
+│     ├── Intégration rapide des avancées issues du projet Tor (isolation, anti-fingerprinting).
+│
+└── ESR
+      ├── Intègre les grandes avancées d’anonymisation après validation sur les autres canaux (ex. : First Party Isolation à partir de v52 ESR).
+      ├── Stabilité et confidentialité renforcées pour les organisations.
+
+cf. https://www.mozilla.org/en-US/firefox/releases/
 
 ## Fichier de profil
 
