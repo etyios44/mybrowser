@@ -1,5 +1,5 @@
 # Protection FireFox
-## Auteur :  z0S.i0S  - Maj : 10/04/2025
+## Auteur :  z0S.i0S  - Maj : 06/05/2025
 
 ## Introduction
 
@@ -15,30 +15,56 @@ cf. https://coveryourtracks.eff.org/
 
 ## Liste de versions 
 
-Firefox
+Sécurisation de l’anonymat sur Firefox
 │
-├── Release (Stable)
-│     ├── Navigation privée (depuis v3.5, améliorée v4+) : ne conserve pas l’historique, les cookies ni les fichiers temporaires.
-│     ├── Blocage des cookies tiers et protection contre le pistage (activé par défaut depuis v67).
-│     ├── Suppression rapide de l’historique récent et fonction « Oublier ce site » (v4+).
-│     ├── Isolation des sites (First Party Isolation, partiellement intégrée après v52).
-│     ├── Indicateur de connexion non sécurisée dans la barre d’adresse (depuis v60, généralisé en v121).
+├── 1. Mises à jour et versions majeures
+│   ├── 2025 : v138
+│   │   └── Derniers correctifs de sécurité et protections anti-pistage renforcées
+│   ├── 2022 : v102
+│   │   └── Total Cookie Protection activée par défaut pour tous
+│   ├── 2021 : v89
+│   │   └── Total Cookie Protection étendue à la navigation privée
+│   ├── 2021 : v86
+│   │   └── Total Cookie Protection disponible en mode strict
+│   ├── 2019 : v70
+│   │   └── Tableau de bord vie privée, blocage renforcé des traqueurs et fingerprinting
+│   ├── 2013 : v23
+│   │   └── Blocage du contenu mixte (protection contre attaques Man-in-the-middle)
+│   └── 2004 : v1.0
+│       └── Lancement de Firefox, priorité à la vie privée et à la sécurité
 │
-├── Beta
-│     ├── Test anticipé des fonctions d’anonymisation avant leur arrivée en stable.
-│     ├── Blocage avancé des contenus non sécurisés (v59+).
+├── 2. Navigation privée (toutes versions)
+│   ├── Efface historique, cookies, données à la fermeture
+│   ├── Blocage des traqueurs et cookies tiers renforcé (v70+)
+│   └── Total Cookie Protection en navigation privée (v89+)
 │
-├── Developer Edition
-│     ├── Accès anticipé aux outils de confidentialité expérimentaux.
-│     ├── Possibilité de désactiver la télémétrie (impact sur l’anonymat).
+├── 3. Fonctionnalités de confidentialité
+│   ├── Enhanced Tracking Protection (v69+)
+│   │   ├── Blocage traqueurs, cookies tiers, cryptominers, fingerprinters
+│   ├── Total Cookie Protection (v86+ mode strict, v89+ navigation privée, v102+ par défaut)
+│   ├── Tableau de bord vie privée (v70+)
+│   ├── Blocage du contenu mixte (v23+)
+│   ├── DNS over HTTPS (v78+)
+│   ├── HTTPS-Only Mode (v91+)
+│   ├── ECH (Encrypted Client Hello) (v118+)
+│   └── SmartBlock (v87+)
 │
-├── Nightly
-│     ├── Premiers tests des nouvelles protections d’anonymisation (blocage de contenus mixtes, labels de connexion non sécurisée).
-│     ├── Intégration rapide des avancées issues du projet Tor (isolation, anti-fingerprinting).
+├── 4. Outils complémentaires
+│   ├── VPN, Proxy
+│   ├── Extensions privacy (uBlock Origin, Privacy Badger, Cookie AutoDelete)
+│   └── Attention à l’unicité du fingerprint avec trop d’extensions
 │
-└── ESR
-      ├── Intègre les grandes avancées d’anonymisation après validation sur les autres canaux (ex. : First Party Isolation à partir de v52 ESR).
-      ├── Stabilité et confidentialité renforcées pour les organisations.
+├── 5. Paramètres et bonnes pratiques
+│   ├── Désactiver télémétrie (Menu > Paramètres > Vie privée)
+│   ├── Gérer autorisations sites (caméra, micro, localisation)
+│   ├── Effacer régulièrement les données de navigation
+│   └── Personnalisation avancée via about:config
+│
+└── 6. Transparence et open source
+    ├── Code source auditable
+    ├── Corrections rapides via bug bounty
+    └── Mises à jour régulières des politiques de confidentialité
+
 
 cf. https://www.mozilla.org/en-US/firefox/releases/
 
