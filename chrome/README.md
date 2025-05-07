@@ -1,4 +1,5 @@
 # Protection Chrome
+## Auteur :  z0S.i0S  - Maj : 07/05/2025
 
 ## Liste des versions
 
