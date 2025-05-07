@@ -81,115 +81,116 @@ Références de fichiers durcis :
 - https://github.com/arkenfox/user.js
 - https://github.com/pyllyukko/user.js
 
-## Elements modifiables
+Pour **automatiser les contrôles de confidentialité et sécurité dans Firefox sous Linux**, il existe plusieurs méthodes robustes et adaptées à différents contextes :
 
-- "Firefox Preferences" ou "**about:preferences#privacy**" :
-  - Général : Firefox est votre navigateur par défaut
-    - Onglets :
-      - À l’ouverture d’un lien, d’une image ou d’un média dans un nouvel onglet, basculer vers celui-ci immédiatement : ${\color{red}OFF}$
-      - Extensions X : ${\color{red}OFF}$
-      - Activer les onglets conteneurs  : ${\color{green}ON}$
-    - Fichiers et applications :
-      - Enregistrer les fichiers :  ${\color{green}ON}$
-      - Lire le contenu protégé par des DRM : ${\color{green}ON}$
-    - Mises à jour de Firefox  :
-      - Vérifier l’existence de mises à jour, mais vous laisser décider de leur installation
-    - Performances : 
-      - Utiliser les paramètres de performance recommandés : ${\color{green}ON}$ (cf "**about:memory**" et "**about:processes**")
-    - Navigation :
-      - Lancer la recherche lors de la saisie de texte : ${\color{red}OFF}$
-      - Activer les contrôles pour l’incrustation vidéo: ${\color{green}ON}$ 
-      - Contrôler la lecture des médias via le clavier, un casque ou l’interface virtuelle : ${\color{green}ON}$ 
-      - Recommander des extensions en cours de navigation :  ${\color{red}OFF}$
-      - Recommander des fonctionnalités en cours de navigation : ${\color{red}OFF}$
-    - Paramètres réseau :
-      - Configuration manuelle du proxy :  => Burp
-        - Proxy HTTP : 127.0.0.1
-        - Port : 8000
-  - Accueil :
-    - Nouvelles fenêtres et nouveaux onglets :
-      - Page d’accueil et nouvelles fenêtres : Page vide
-      - Nouveaux onglets : Page vide
-    - Contenu de la Page d’accueil de Firefox :
-      - Recherche web : ${\color{green}ON}$ 
-      - Raccourcis : ${\color{red}OFF}$
-      - Articles recommandés : ${\color{red}OFF}$
-      - Activité récente : ${\color{red}OFF}$
-    - Recherche :
-      - Moteur de recherche par défaut  : Duckduckgo
-      - Suggestions de recherche : 
-        - Afficher les suggestions de recherche : ${\color{red}OFF}$
-        - Afficher les recherches récentes : ${\color{red}OFF}$
-    - Vie privée :
-      - Protection renforcée contre le pistage : Personnalisée
-        - Cookies : Cookies de pistage intersites et isolation des autres cookies intersites
-        - Contenu utilisé pour le pistage : dans toutes les fenêtres
-        - Mineurs de cryptomonnaies : ${\color{green}ON}$ 
-        - Détecteurs d’empreinte numérique connus : ${\color{green}ON}$ 
-        - Détecteurs d’empreinte numérique suspectés :  dans toutes les fenêtres
-      - Mots de passe  :
-        - Proposer d’enregistrer les mots de passe : ${\color{red}OFF}$
-        - Afficher des alertes pour les mots de passe de sites concernés par des fuites de données : ${\color{red}OFF}$
-        - Utiliser un mot de passe principal : ${\color{red}OFF}$
-      - Remplissage automatique :
-        - Enregistrer et remplir automatiquement les adresses  : ${\color{red}OFF}$
-      - Historique :
-        - Toujours utiliser le mode de navigation privée : ${\color{green}ON}$
-      - Permissions :
-        - Bloquer les fenêtres popup : ${\color{green}ON}$
-        - Prévenir lorsque les sites essaient d’installer des modules complémentaires : ${\color{green}ON}$
-      - Collecte de données par Firefox et utilisation : 
-        - Envoyer des données techniques et d’interaction à Mozilla : ${\color{red}OFF}$
-        - Envoyer un ping quotidien d’utilisation à Mozilla : ${\color{red}OFF}$
-        - Envoyer automatiquement les rapports de plantage : ${\color{red}OFF}$
-      - Préférences publicitaires des sites web :
-        - Autoriser les sites web à effectuer des mesures publicitaires en respectant la vie privée : ${\color{red}OFF}$
-      - Sécurité :
-        - Protection contre les contenus trompeurs et les logiciels dangereux :
-          - Bloquer les contenus dangereux ou trompeurs : ${\color{green}ON}$
-        - Certificats : 
-          - Interroger le répondeur OCSP pour confirmer la validité de vos certificats : ${\color{red}OFF}$
-          - Autoriser Firefox à faire automatiquement confiance aux certificats racines tiers que vous installez : ${\color{green}ON}$
-        - Mode HTTPS uniquement :
-          - Activer le mode HTTPS uniquement dans toutes les fenêtres : ${\color{green}ON}$
-        - DNS via HTTPS : 
-          - Activer le DNS via HTTPS en utilisant : Protection maximale
-      - Synchronisation : ${\color{red}OFF}$
+---
 
-- about:addons :
-  - Extensions : 
-    - Autoriser les mises à jour automatiques : ${\color{red}OFF}$
-  - Thèmes :
-    - Autoriser les mises à jour automatiques : ${\color{red}OFF}$
-  - Plugins : 
-    - Autoriser les mises à jour automatiques : ${\color{red}OFF}$
+## 1. **Utiliser les politiques d’entreprise (policies.json)**
 
-- "**about:config**" : variable selon  version du navigateur. 
+- Créez le dossier :  
+  `/etc/firefox/policies/`
+- Ajoutez un fichier `policies.json` contenant vos règles, par exemple :
 
-<u>Nota :</u> Chercher par mot clé pour retrouver les paramètres en rapport. Recherches générales : "stream", "update","extensions", "privacy"
-  
-  - StartUp Settings : like "browser"
-  - Geolocation : like "geo"
-  - Language / Locale : like "local"
-  - Auto-updates / Recommendations : like "update"
-  - Telemetry : like "telemetry"
-  - Studies : like "studies"
-  - Crash Reports : like "crash"
-  - Captive Portal Detection / Network Checks : like "detection"
-  - Safe Browsing : like "safe"
-  - Network: DNS, Proxy, IPv6 : like "dns" 
-  - Search Bar: Suggestions, Autofill : like "search"
-  - Passwords : like "passw"
-  - Disk Cache / Memory : like "disk"
-  - HTTPS / SSL/TLS / OSCP / CERTS : like "http" 
-  - Headers / Referers : like "head"
-  - Audio/Video: WebRTC, WebGL, DRM : like "web" 
-  - Downloads : like "down"
-  - Cookies : like "cook"
-  - UI Features : like "ui"
-  - Extensions : like "extension"
-  - Shutdown Settings : like "shutdown"
-  - Fingerprinting (RFP) : like "finger"
+```json
+{
+  "policies": {
+    "DisableTelemetry": true,
+    "BlockAboutConfig": false,
+    "Cookies": {
+      "Behavior": "reject_trackers"
+    },
+    "SearchBar": "separate",
+    "DefaultSearchEngine": "DuckDuckGo",
+    "SafeBrowsing": {
+      "Enabled": false,
+      "MalwareProtection": false,
+      "PhishingProtection": false
+    },
+    "DNSOverHTTPS": {
+      "Enabled": true,
+      "ProviderURL": "https://dns.nextdns.io/votre_id"
+    },
+    "ExtensionSettings": {
+      "*": {
+        "installation_mode": "allowed"
+      }
+    },
+    "Permissions": {
+      "Camera": "block",
+      "Microphone": "block",
+      "Location": "block",
+      "Notifications": "block",
+      "Clipboard": "block",
+      "Sensors": "block"
+    },
+    "SSLVersionMin": "tls1.2",
+    "SSLVersionMax": "tls1.3",
+    "HttpsOnlyMode": true
+  }
+}
+```
+- Redémarrez Firefox pour appliquer les politiques.
+
+---
+
+## 2. **Configurer via user.js (par profil ou globalement)**
+
+- Placez un fichier `user.js` dans le dossier du profil Firefox (`~/.mozilla/firefox/xxxxxx.default/`).
+- Exemple de lignes à inclure :
+
+```js
+// Bloquer cookies tiers
+user_pref("network.cookie.cookieBehavior", 1);
+// Désactiver le préchargement
+user_pref("network.prefetch-next", false);
+// Désactiver Safe Browsing
+user_pref("browser.safebrowsing.enabled", false);
+user_pref("browser.safebrowsing.malware.enabled", false);
+// Toujours utiliser HTTPS
+user_pref("dom.security.https_only_mode", true);
+// DNS-over-HTTPS
+user_pref("network.trr.mode", 2);
+user_pref("network.trr.uri", "https://dns.nextdns.io/votre_id");
+// Désactiver WebRTC
+user_pref("media.peerconnection.enabled", false);
+// Désactiver la télémétrie
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("datareporting.healthreport.uploadEnabled", false);
+// Bloquer accès caméra/micro/localisation/notifications
+user_pref("permissions.default.camera", 2);
+user_pref("permissions.default.microphone", 2);
+user_pref("permissions.default.geo", 2);
+user_pref("permissions.default.desktop-notification", 2);
+```
+
+---
+
+## 3. **Fichiers de configuration avancés**
+- Pour verrouiller certains réglages, utilisez :
+  - `/etc/firefox/syspref.js` (pour des valeurs par défaut ou verrouillées)
+  - `autoconfig.js` et `mozilla.cfg` pour des configurations avancées ou des scripts de verrouillage.
+
+---
+
+## 4. **Déploiement automatisé**
+- Utilisez des outils comme Ansible, Puppet, SaltStack ou un simple script bash pour copier et maintenir ces fichiers sur tous les postes Linux.
+
+---
+
+## 5. **Vérification et priorités**
+- Les réglages via `policies.json` prennent le dessus sur `mozilla.cfg` et `user.js`.
+- Pour vérifier les politiques actives, tapez :  
+  `about:policies`  
+  dans la barre d’adresse de Firefox.
+
+---
+
+**Résumé** :  
+- Placez un fichier `policies.json` dans `/etc/firefox/policies/` pour appliquer des politiques globales.
+- Pour des réglages plus fins ou spécifiques à un profil, utilisez `user.js`.
+- Automatisez la distribution de ces fichiers via des outils de gestion de configuration ou des scripts.
+- Cette approche permet de contrôler efficacement la confidentialité et la sécurité de Firefox sur Linux, de façon centralisée et reproductible.
+
 
 ## Extensions
 
