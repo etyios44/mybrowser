@@ -5,6 +5,7 @@
 
 cf. https://static.open-scap.org/ssg-guides/ssg-chromium-guide-index.html
 
+```sh
 Sécurisation de l’anonymat sur Chrome
 │
 ├── 1. Mises à jour et versions majeures
@@ -72,6 +73,7 @@ Sécurisation de l’anonymat sur Chrome
     ├── Chrome reste lié à l’écosystème Google, collecte de données persistante même en mode privé
     ├── Certaines API de Privacy Sandbox offrent un anonymat relatif mais pas absolu
     └── Popularité du navigateur attire des extensions ou clones malveillants, vigilance requise
+```
 
 ## Détail des modifications 
 

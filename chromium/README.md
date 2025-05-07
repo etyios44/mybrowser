@@ -80,6 +80,7 @@ WebRTC IP handling policy | Disable Non-Proxied UDP | `--webrtc-ip-handling-poli
 
 ## Liste des versions
 
+```sh
 Sécurisation de l’anonymat sur Chromium
 │
 ├── 1. Mises à jour et versions majeures
@@ -134,3 +135,4 @@ Sécurisation de l’anonymat sur Chromium
 │   ├── Pas de mise à jour automatique : il faut télécharger manuellement les nouvelles versions pour rester protégé
 │   ├── Sandbox de sécurité parfois désactivée selon les distributions ou compilations
 │   └── Projets dérivés comme Ungoogled Chromium suppriment les connexions résiduelles à Google
+```
