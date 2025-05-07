@@ -15,6 +15,7 @@ cf. https://coveryourtracks.eff.org/
 
 ## Liste de versions 
 
+```sh
 Sécurisation de l’anonymat sur Firefox
 │
 ├── 1. Mises à jour et versions majeures
@@ -64,7 +65,7 @@ Sécurisation de l’anonymat sur Firefox
     ├── Code source auditable
     ├── Corrections rapides via bug bounty
     └── Mises à jour régulières des politiques de confidentialité
-
+```
 
 cf. https://www.mozilla.org/en-US/firefox/releases/
 
